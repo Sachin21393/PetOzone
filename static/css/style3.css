@@ -1,0 +1,29 @@
+footer {
+    display: block;
+    clear: both;
+    background-color: #93e0ff;
+    font-size: 24px;
+    height: auto;
+    padding: 32px 64px;
+    text-align: center;
+    grid-area: footer;
+  }
+
+  .sponsors ul {
+    display: block;
+    list-style: none none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .sponsors li {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    clear: none;
+    margin: 16px;
+  }
+  .sponsors img {
+    width: 96px;
+    height: 96px;
+  }

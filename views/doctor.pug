@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+link(rel="stylesheet", href="css/style2.css")
+<title>Hello, world!</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Petozone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+        <a class="nav-link active " aria-current="page" href="/index">Home</a></li>
+        <li class="nav-item active">
+        <a class="nav-link " href="/confirm">Book an Appointment</a>
+        </li>
+        <li class="nav-item active">
+        <a class="nav-link " href="/about">About Us</a>
+        </li>
+        <li class="nav-item active">
+        <a class="nav-link active " href="/login">Log Out</a>
+        </li>
+
+        <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle active " href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-expanded="false">Facility</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="/med">Veterinary drug</a></li>
+        <li><a class="dropdown-item" href="/doctor">Veterinary Doctor</a></li>
+
+        <li>
+        <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="https://www.google.com/maps/search/veterinary+care/@19.3027551,72.8597154,15z">Nearby
+        Pet Supplier</a></li>
+        </ul>
+        </li>
+
+        </ul>
+
+
+
+        </div>
+        </div>
+
+</nav>
+
+
+<h1>Our specialist Doctors</h1>
+<marquee behavior="scroll">
+    <h3>Click on Doctor's name to book an appointment <span class="badge bg-info text-dark">New</span></h3>
+    </marquee>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for doctor.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="/confirm">Dr.Krish Murjani(Practising in KDM hospital,Experience of 5+years)</a></li>
+  <li><a href="/confirm">Dr.Atharva Kadam(Practising in HOLY hospital,Experience of 10+years)</a></li>
+
+  <li><a href="/confirm">Dr.Pullarabinda Mahapratap(Practising in Shalom hospital,Experience of 5+years)</a></li>
+  <li><a href="/confirm">Dr.Vedant Jumle(Practising in Divine hospital,Experience of 7+years)ob</a></li>
+
+  <li><a href="/confirm">Dr.Sachin Jangid(Practising in KDM hospital,Experience of 5+years)</a></li>
+  <li><a href="/confirm">Dr.Hemal nisar.(Practising in KDM hospital,Experience of 5+years)</a></li>
+  <li><a href="/confirm">Dr.Mandar kasan(Practising in USA hospital,Experience of 10+years)</a></li>
+   <li><a href="/confirm">Dr.Buster Lloyd-Jones.(Practising in UK hospital,Experience of 5+years)</a></li>
+    <li><a href="/confirm">Dr.Louis J(Practising in Germany hospital,Experience of 5+years)</a></li>
+     <li><a href="/confirm">Dr.Mary Knight Dunlap(Practising in Mumbai hospital,Experience of 5+years)</a></li>
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+  <script>function myFunction() { var input, filter, ul, li, a, i, txtValue; input = document.getElementById("myInput");filter = input.value.toUpperCase();ul = document.getElementById("myUL");li = ul.getElementsByTagName("li");for (i = 0; i < li.length; i++) {a = li[i].getElementsByTagName("a")[0];txtValue = a.textContent || a.innerText;if (txtValue.toUpperCase().indexOf(filter) > -1) {li[i].style.display = "";} else {li[i].style.display = "none";}}}</script>
+
+</html>
