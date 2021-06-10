@@ -90,7 +90,7 @@ app.post('/contact', async (req, res) => {
         if (err) {
             res.status(400).send("nooo")
         }else{
-            res.render("form.pug")
+            res.render("login.pug")
         }
     });
 });
@@ -101,10 +101,10 @@ app.post('/login', async (req, res) => {
         try{
             console.log(data.password,password);
             console.log(data);
-            if (err) {
-                res.send("invalid");
+            if (data.password===password) {
+                           res.status(200).render('index.pug');
             }else{
-                res.status(200).render('index.pug');
+               res.send("invalid");
             }
         }
         catch{
