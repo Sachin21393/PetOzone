@@ -1,6 +1,27 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #c0f0fc;
+    background-image: url(de.png);
+    height: 300%;
+  
+    /* Center and scale the image nicely */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .bgim{
+    background-image: url("de.png");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   * {
@@ -9,9 +30,10 @@ body {
   
   /* style the container */
   .container {
-    position: relative;
+      margin-top: 10vh;
+    /* position: relative; */
     border-radius: 5px;
-    background-color: #98e4f7;
+    /* background-color#98e4f7; */
     padding: 20px 0 30px 0;
   } 
   
