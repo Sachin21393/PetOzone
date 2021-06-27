@@ -8,14 +8,15 @@
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <title>Petozone</title>
 
- <script>alert("Hello, A small guidance how to use this website on home page you can verify us that who we are there are many feature.I will give a quick overview.1->first sign up and then login with right email and password. how to use if you want to book an appointment then go on bookappointment search for doctor and the fill the form in a second you will get an email of confirmation.2->if you want search for any veterinary medicine got to veterinary drug page search for medicine and then see the price then click on chekout and fill that form you will get and autogenrated billing.3->nearby pet supplier click you will be redirect to google map. ");</script>
+
 </head>
  <body style="background-color:rgb(249, 255, 255);">
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-success">
  <div class="container-fluid">
- <a class="navbar-brand" href="#">Petozone</a>
+ <a class="navbar-brand" href="#"> Petozone</a>
  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
  <span class="navbar-toggler-icon"></span>
  </button>
@@ -23,9 +24,7 @@
  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
  <li class="nav-item ">
  <a class="nav-link active " aria-current="page" href="/index">Home</a></li>
- <li class="nav-item ">
- <a class="nav-link  active " href="/confirm">Book an Appointment</a>
- </li>
+
  <li class="nav-item ">
  <a class="nav-link active" href="/about">About Us</a>
  </li>
@@ -45,9 +44,14 @@
  <li><a class="dropdown-item" href="https://www.google.com/maps/search/veterinary+care/@19.3027551,72.8597154,15z">Nearby
  Pet Supplier</a></li>
  </ul>
+ 
+ 
+ <li class="nav-item ">
+<a class="nav-link active fa fa-fw fa-lock " onclick="openForm()" aria-current="page"  href="/dlogin" >ADMIN</a>
  </li>
-
+ </li>
  </ul>
+ 
 
 
 
@@ -107,7 +111,7 @@
  <div class="accordion-item">
  <h2 class="accordion-header" id="headingOne">
  <b>FAQS</b>
- <button class="accordion-button" type="button" style="background-color: #0275d8; color: rgb(30, 4, 41); font-weight: 700;"data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"aria-controls="collapseOne">
+ <button class="accordion-button" type="button" style="background-color: #5bc0de; color: rgb(30, 4, 41); font-weight: 700;"data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"aria-controls="collapseOne">
  Accordion Why choose PetOzone?
  </button>
  </h2>
@@ -120,7 +124,7 @@
  </div>
  <div class="accordion-item">
  <h2 class="accordion-header" id="headingTwo">
- <button class="accordion-button collapsed" type="button"style="background-color: #0275d8; color: black; font-weight: 700;" data-bs-toggle="collapse"data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+ <button class="accordion-button collapsed" type="button"style="background-color: #5bc0de; color: black; font-weight: 700;" data-bs-toggle="collapse"data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
  Accordion What is the importance of PetOzone?
  </button>
  </h2>
@@ -133,7 +137,7 @@
  </div>
  <div class="accordion-item">
  <h2 class="accordion-header" id="headingThree">
- <button class="accordion-button collapsed"style="background-color: #0275d8; color: black; font-weight: 700;" type="button"data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"aria-controls="collapseThree">What are the benefits of using PetOzone over other similar services?
+ <button class="accordion-button collapsed"style="background-color: #5bc0de; color: black; font-weight: 700;" type="button"data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"aria-controls="collapseThree">What are the benefits of using PetOzone over other similar services?
  </button>
  </h2>
  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"data-bs-parent="#accordionExample">
@@ -144,6 +148,7 @@
  </div>
  </div>
  </div>
+ <div class="card">
  <div class="containe my-3">
  <div class="row mb-2">
  <div class="col-md-6">
@@ -175,6 +180,7 @@
  <img class="bd-placeholder-img" width="200" height="250" src="image/logo.png" alt="" srcset="">
 
 
+ </div>
  </div>
  </div>
  </div>
@@ -225,8 +231,25 @@
     <div class="sponsor-title text-center">
 
 </section>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"crossorigin="anonymous"></script>
  </body>
+<script>function openForm() {document.getElementById("myForm").style.display = "block";}function closeForm() {document.getElementById("myForm").style.display = "none";}</script>
 
 </html>
