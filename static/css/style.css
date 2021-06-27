@@ -1,39 +1,8 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #c0f0fc;
-    background-image: url(de.png);
-    height: 300%;
-  
-    /* Center and scale the image nicely */
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  }
-  .bgim{
-    background-image: url("de.png");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* style the container */
-  .container {
-      margin-top: 10vh;
-    /* position: relative; */
+.container {
+/*       margin-top: 10vh; */
+    position: relative;
     border-radius: 5px;
-    /* background-color#98e4f7; */
+    background-color#98e4f7;
     padding: 20px 0 30px 0;
   } 
   
@@ -148,3 +117,46 @@ body {
       text-align: center;
     }
   }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("/image/de.png");
+  
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+ 
+  color: blue;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
