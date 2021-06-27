@@ -55,7 +55,7 @@ function exportMail(receiver, subject, html,timing){
 //routes
 app.get('/', (req, res) => {
     const params = {}
-    res.redirect("/index")
+    res.redirect("/login")
 })
 app.get('/login', (req, res) => {
     const params = {}
@@ -280,3 +280,4 @@ app.post("/checkout", (req,res) => {
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
 });
+
