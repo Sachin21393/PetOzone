@@ -40,20 +40,22 @@ const transporter = nodemailer.createTransport({
 });
 
 
-function exportMail(receiver, subject, html){
+function exportMail(receiver, subject, html,timing){
     let info = transporter.sendMail({
         from: 'petozone update', // sender address
         to: receiver, // list of receivers
         subject: "", // Subject line
-        text: "", // plain text body
+
         html: html, // html body
+    
+      
     });
 }
 
 //routes
 app.get('/', (req, res) => {
     const params = {}
-    res.redirect("/login")
+    res.redirect("/index")
 })
 app.get('/login', (req, res) => {
     const params = {}
@@ -112,7 +114,24 @@ app.post('/login', async (req, res) => {
         }
     });
 })
-
+app.post('/dlogin', async (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+    user_database.findOne({ email: email }, (err, data) => {
+        try{
+            console.log(data.password,password);
+            console.log(data);
+            if (data.password===password) {
+                           res.status(200).render('qr.pug');
+            }else{
+               res.send("invalid");
+            }
+        }
+        catch{
+            res.redirect("/")
+        }
+    });
+})
 app.get("/admin", (req,res) => {
     res.status(200).render("admin.pug", {});
 })
@@ -194,6 +213,8 @@ app.post("/confirm_appointment", async (req,res) => {
     const email = req.body.email;
     const timing = req.body.timing;
     const name = req.body.name;
+
+
     const user = user_database.findOne({ email: email }, (err, data) => {
         const html = `
         <html>
@@ -224,7 +245,7 @@ app.post("/confirm_appointment", async (req,res) => {
         </style>
         <body style="background-color:rgb(193, 250, 250);">
          <div class="header" style=" text-align: center;
-         background-color:black ;">  <h1>Congratulation!!!!</h1></div>
+         background-color:black ;color:white;">  <h1>Congratulation!!!!</h1></div>
          <hr>
          <div class="container">
              <h2><i>DEAR SIR/MADAM,</i></h2>
@@ -235,6 +256,7 @@ app.post("/confirm_appointment", async (req,res) => {
             </div>
          </div>
          <hr>
+        
          <div class="footer">
              <h2><i>Thank You!!</i></h2>
 
