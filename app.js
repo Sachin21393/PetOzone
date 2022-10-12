@@ -29,15 +29,7 @@ app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: "petozone.test@gmail.com",
-      pass: "testing100",
-    },
-});
+
 
 
 function exportMail(receiver, subject, html,timing){
